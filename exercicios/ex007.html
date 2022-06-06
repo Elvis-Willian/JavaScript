@@ -5,9 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando números</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+        }
+        h1{
+            padding-left: 10px;
+        }
+        div#res {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
-    <input type="number">
+    <input type="number" name="txtn1" id="txtn1">+
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+        var n1 = window.document.getElementById('txtn1')
+        var n2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        //os numeros vão vim em forma de string, precisamos mudar para o formato de numero//
+        var num1 = Number(n1.value)
+        var num2 = Number(n2.value)
+        var s = num1 + num2
+        res.innerHTML = `A soma entre ${num1} e ${num2} é igual a ${s}`
+    }
+    </script>
 </body>
 </html>
