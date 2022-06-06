@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição composta</title>
+</head>
+<body>
+    Em qual país você mora? <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+        Resultado: 
+    </div>
+
+    <script>
+        function verificar()
+        var nacionalidade = window.document.querySelector('input#pais')
+        var resultado = window.document.querySelector('div#res')
+        resultado.innerHTML (`Você é `)
+        if (nacionalidade == 'Brasil') {
+            resultado.innerHTML (`Brasileiro`)
+        }
+        else {
+            resultado.innerHTML (`Estrangeiro`)
+        }
+    </script>
+</body>
+</html>
