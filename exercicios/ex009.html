@@ -7,22 +7,17 @@
     <title>Condição composta</title>
 </head>
 <body>
-    Em qual país você mora? <input type="text" name="pais" id="pais">
-    <input type="button" value="verificar" onclick="verificar()">
+    Em qual país você mora? <input type="string" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="calcular()">
     <div id="res">
         Resultado: 
     </div>
 
     <script>
-        function verificar()
-        var nacionalidade = window.document.querySelector('input#pais')
-        var resultado = window.document.querySelector('div#res')
-        resultado.innerHTML (`Você é `)
-        if (nacionalidade == 'Brasil') {
-            resultado.innerHTML (`Brasileiro`)
-        }
-        else {
-            resultado.innerHTML (`Estrangeiro`)
+        function calcular() {
+            var ps = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Você mora no ${ps},`
         }
     </script>
 </body>
