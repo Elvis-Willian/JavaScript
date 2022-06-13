@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de medidad</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+        div#res {
+            padding: 7px;
+        }
+        #bot {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Conversor de Medidas</h1>
-    <input type="button" value="Converter" onclick="converter()">
+    <input type="button" value="Converter" onclick="converter()" id="bot">
 
     <div id="res">Clique no botão acima para iniciar</div>
     <div id="r1"></div>
