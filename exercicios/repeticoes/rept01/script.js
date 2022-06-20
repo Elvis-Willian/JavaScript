@@ -1,13 +1,28 @@
-function verificar() {
-    var inicio = Number.parseInt(document.getElementById("inicio").value)
-    var fim = Number.parseInt(document.getElementById("fim").value)
-    var passo = Number.parseInt(document.getElementById("passo").value)
+function contar() {
+    let ini = document.getElementById('txt1')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
 
-    while (inicio <= fim) {
-        passo + 0
-        res.innerHTML=(`${inicio}`)
+    if (ini.value.length == 0 || fim.value.length == 0 ||passo.value.length == 0){
+        window.alert('[ERRO] Faltam dados!')
+    }  else {
+        res.innerHTML = 'Contando'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (i < f) {
+            for (let c = i; c <= f; c += p){
+                res.innerHTML=`${c}`
+            }
+        } else {
+            for (let c = i; c > f; c -= p) {
+                res.innerHTML=`${c}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
     }
-
-        res.style.textAlign = 'center'
         
     }
+
+    //NÃO QUER FUNCIONAR
