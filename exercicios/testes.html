@@ -5,28 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testes</title>
+    <style>
+        body{
+            background-color: dimgrey;
+            font: normal 20px Arial;
+            color: white;
+            text-align: center;
+        }
+        section{
+           background-color: white;
+           color: black;
+           padding: 5px;
+           border-radius: 5px;
+           width: 400px;
+           margin: auto;
+        }
+        
+    </style>
+    
 </head>
 <body>
-    <h1>Testando</h1>
-    <!--<script>
-        var nome = window.prompt('Qual é o seu nome?')
-        window.alert ('É um grande prazer te conhecer, ' + nome + '!') //concatenação
-    </script> -->
-    <!--<script>
-        var idade = 26
-        var nome = 'Elvis'
-        var sal = 1500
-        document.write (`Seu nome é ${nome}, tenho ${idade} anos, com salario de ${sal}`)
-    </script>-->
-    <!--<script>
-        var n1 = Number(window.prompt('Digite um numero: '))
-        var n2 = Number(window.prompt('Digite outro número: '))
-        var s = n1+n2
-        document.write(`A soma é ${s}`)
-    </script>-->
-    <!--<script>
-        var s = window.prompt('Escreva uma palavra: ')        
-        document.write(`Essa palavra tem ${s.length} letras`)
-    </script>-->
+    <header>
+        <h1>Testes</h1>
+     </header>
+     <section>
+         <div>
+          <p>Em qual turno vc estuda: </p>
+          <input type="radio" name="manha" id="manha" checked>
+          <label for="manha">Matutino</label>
+          <input type="radio" name="tarde" id="tarde">
+          <label for="tarde">Vespertino</label>
+          <input type="radio" name="noite" id="noite">
+          <label for="noite">Noturno</label>
+          
+         </div>
+         <div id="res"></div>
+         <div id="res2"></div>
+     </section>
+     <footer>
+         <p>&copy; Fazendo Exercício</p>
+     </footer>
+
+     <script src="testes.js"></script>
 </body>
 </html>
