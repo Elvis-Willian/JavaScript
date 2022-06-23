@@ -1,7 +1,9 @@
-function contar(){
-    var count = 1 
-    var res = document.getElementById('res')
-    while (count <= 10) {
-        
+function contar() {
+    let num = 1 
+    let res = document.getElementById('res')
+
+    while (num <= 10) {
+        res.innerHTML= 'olá'
+        num++
     }
 }
