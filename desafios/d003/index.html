@@ -9,19 +9,17 @@
 </head>
 <body>
     <header>
-        <h1>Analisador</h1>
+        <h1>Dados</h1>
      </header>
      <section>
          <div>
-           <p>Telefonou para a vítima? <input type="radio" name="tels" id="tels" >sim<input type="radio" name="teln" id="teln">não</p>
-           <p>Esteve no local do crime? <input type="radio" name="locs" id="locs">sim <input type="radio" name="locn" id="locn">não </p>
-           <p>Mora perto da vítima? <input type="radio" name="moras" id="moras">sim <input type="radio" name="moran" id="moran">não</p>
-           <p>Devia para a vítima? <input type="radio" name="devs" id="devs">sim <input type="radio" name="devn" id="devn">não</p>
-           <p>Ja trabalhou para a vítima? <input type="radio" name="trabs" id="trabs">sim <input type="radio" name="trabn" id="trabn">não</p>
-           <input type="button" value="Analisar" onclick="analisarDados()">
+         <p>Início: <input type="number" name="txti" id="txti"></p>
+         <p>Fim: <input type="number" name="txtf" id="txtf"></p>
+         <p>Passo: <input type="number" name="txtp" id="txtp"></p>  
+         <input type="button" value="contar" onclick="contar()">
          </div>
          <div id="res">
-           
+           Preparando contagem...
          </div>
      </section>
      <footer>
