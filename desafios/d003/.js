@@ -1,64 +1,36 @@
-let num = document.querySelector('input#fnum')
-let lista = document.querySelector('select#flista')
-let res = document.querySelector('div#res')
-let valores = []
+let tels = document.getElementById('tels')
+let teln = document.getElementById('teln')
 
-function isNumero(n) {
-    if (Number(n) >= 1 && Number(n) <= 100) {
-        return true
-    } else {
-        return false
+let locs = document.getElementById('locs')
+let locn = document.getElementById('locn')
+
+let moras = document.getElementById('moras')
+let moran = document.getElementById('moran')
+
+let devs = document.getElementById('devs')
+let devn = document.getElementById('devn')
+
+let trabs = document.getElementById('trabs')
+let trabn = document.getElementById('trabn')
+
+let res = document.getElementById('res')
+
+function analisarDados() {
+    if (tels && locs){
+        res.innerHTML = 'Você é  Suspeito'
     }
-}
-
-function inLista(n, l) {
-    if (l.indexOf(Number(n)) != -1) {
-        return true 
-    } else {
-        return false
+    if (tels && moras) {
+        res.innerHTML = 'aaaa'
     }
-}
-
-function adicionar() {
-    if (isNumero(num.value) && !inLista(num.value, valores)) {
-        valores.push(Number(num.value))
-        let item = document.createElement('option')
-        item.text = `Valor ${num.value} adicionado`
-        lista.appendChild(item)
+    if (tels && devs) {
         res.innerHTML = ''
-    }   else {
-        window.alert ('Valor inválido ou já encontrado na lista!')
-        num.value = ' '
-        num.focus()
     }
-}
 
-function finalizar() {
-    if (valores.length == 0) {
-        window.alert('Adicione valores antes de finalizar!')
-    } else {
-        let tot = valores.length
-        let maior = valores[0]
-        let menor = valores[0]
-        let soma = 0
-        let media = 0
+};
 
-    for (let pos in valores) {
-        soma += valores[pos]
-
-        if (valores[pos] > maior)
-        maior = valores[pos]
-
-        if (valores[pos] < menor)
-        menor = valores[pos]
-    }
-    media = soma / tot
-    res.innerHTML = ''
-
-    res.innerHTML= `<p> Ao todo temos ${tot} números cadastrados.
-    <p> O maior valor é o ${maior}
-    <p>O menor valor é o ${menor}
-    <p>Somando todos o resultado é ${soma}
-    <p>A média é de ${media}`
-    }
-}
+/*21. Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+"Telefonou para a vítima?"
+"Esteve no local do crime?"
+"Mora perto da vítima?"
+"Devia para a vítima?"
+"Já trabalhou com a vítima?" O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".*/
