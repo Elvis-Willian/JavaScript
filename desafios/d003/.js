@@ -1,12 +1,13 @@
 function clicar() {
-    let n1 = Number(document.getElementById('txtn1').value)
-    let n2 = Number(document.getElementById('txtn2').value)
+    let nome = document.getElementById('txtnome')
+    let sexo = document.getElementById('txtsex')
+    let valor = Number(document.getElementById('txtval').value)
+    let descmasc = (valor / 100) * 5; 
     let res = document.getElementById('res')
-  //  let num1 = Number(n1.value)
-  //  let num2 = Number(n2.value)
+    
+  if (sexo == 'masculino') {
 
-    let soma = n1 + n2
-
-    res.innerHTML = (`A soma ${soma}`)
+    res.innerHTML = (`Olá`)
+  }
 }
     
