@@ -1,14 +1,10 @@
-function checar() {
-let n = Number(document.getElementById('txtn').value)
-let res = document.getElementById('res')
-const random = (num) => Math.floor(Math.random() * num);
+//let n = Number(document.getElementById('txtn').value)
+//let res = document.getElementById('res')
 
-  if (n == random) {
-    res.innerHTML = (`você digitou o número ${n} e o número sorteado foi o ${random}, Acertou`)
-  } else {
-    res.innerHTML = (`você digitou o número ${n} e o número sorteado foi o ${random}, ERROU`)
-  }
-      
+function checar(a, b) {
+return Math.floor(Math.random() * (b - a + 1))+ a
 }
+
+console.log(checar(1, 10))
 
 
