@@ -1,3 +1,3 @@
-let cor = 'vermelho'
+function checar() {
 
-console.log('')
+}
