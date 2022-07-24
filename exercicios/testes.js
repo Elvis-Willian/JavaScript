@@ -1,1 +1,3 @@
-var cores = ["preto" , "branco" , "vermelho"]
+let cor = 'vermelho'
+
+console.log('')
